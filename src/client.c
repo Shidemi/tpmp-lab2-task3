@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <string.h>
 #include "struct.h"
 
-void printStudent(Student s);
-
 int main() {
-    Student s;
+    CINEMA films[3] = {
+        {"Film1", 16, 30, 80, "Comedy", 100},
+        {"Film2", 19, 0, 120, "Action", 200},
+        {"Film3", 17, 15, 70, "Comedy", 300}
+    };
 
-    s.id = 1;
-    strcpy(s.name, "Artem");
-    s.grade = 9.5;
-
-    printStudent(s);
+    printAll(films, 3);
+    findMinMax(films, 3);
+    before18(films, 3);
+    comedyMaxBudget(films, 3);
 
     return 0;
 }
